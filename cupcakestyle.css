@@ -1,0 +1,199 @@
+*{
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+}
+*:not(input){
+    margin:0;
+    padding: 0;
+    border:0;
+}
+body{
+    background-color: #2a8878;
+    text-align: center;
+    font-family: 'Cookie', fantasy;
+}
+nav{
+    background-color: #0c7973;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+input{
+    background-color: #0e918a;
+    color: gray;
+    border-radius: 10px;
+    padding: 0.3rem;
+    border:0;
+    width: 5rem;
+    margin-right: 10px;
+}
+::placeholder{
+    color:lightgray;
+}
+ul, button{
+display: none;
+}
+#icon{
+    margin-left: 5px;
+}
+#logo{
+    margin: 20px auto 20px auto;
+    border: 1px solid #feebda;
+    border-radius: 50%;
+}
+h1{
+    color: #feebda;
+    font-family: 'Cookie', fantasy;
+    font-size: 50px;
+    margin: 10px;
+}
+.headerp{
+    color:#feebda;
+    padding: 10px;
+}
+.notI{
+    color:#e782a4;
+    border-bottom: 1px dotted #e782a4;
+    font-style:italic;
+    text-decoration: none;
+}
+article{
+    background-color: #feebda;
+    margin: 5px;
+    padding: 20px;
+}
+h2, h2+p{
+    color: #e782a4;
+}
+h2{
+    font-family: 'Cookie', fantasy;
+    font-size: 30px;   
+}
+h2+p{
+    border-top: 1px dotted #e782a4;
+    padding: 10px 0px;
+}
+p{
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+.minis{
+    display: none;
+}
+footer{
+    background-color: #0c7973;
+    margin: 20px 0 0 0;
+    padding: 20px;
+    color: #feebda;
+}
+
+@media screen and (min-width:800px){
+    #icon{
+        display: none;
+    }
+    
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        height: 80px;
+    }
+    ul{ width: 100%;
+        background-color: #feebda;
+        display: initial;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center
+
+    }
+    li a{
+        text-decoration: none;
+        color: #991d42;
+        font-family: 'Cookie', fantasy;
+        padding:20px;
+        line-height: 32px;
+        font-size:30px;
+    }
+    input{
+        line-height: 20px;
+        margin:5px;
+        width: 200px;
+    }
+    header{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
+    .flexlogo{
+        margin:5px;
+        width: 80%;
+    }
+    #logo{
+        transform: scale(0.8);
+        margin:15px;
+    }
+    .flexSection{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+   .flexSection article{
+        width: 45%;
+        height: 230px;
+   }
+}
+@media screen and (min-width:1200px){
+    nav{
+        position: relative;
+        align-items: flex-start;
+    }
+    input{
+        position: absolute;
+        top:2px;
+        right: 2px;
+    }
+    ul{
+        justify-content: flex-end;
+    }
+   
+    header{
+        position: relative;
+        margin:50px;
+    }
+    #logo{
+        transform: scale(0.5);
+        position: absolute;
+        top: -175px;
+        left: -30px;
+    }
+    .headerp{
+        column-count: 2;
+        width: 50%;
+    }
+    .flexSection{
+        display: flex;
+        justify-content: center;
+    }
+    .flexSection article{
+        width: 30%;
+    }
+    article{
+        margin-top: 20px;
+        padding-top: 20px;
+        position: relative;
+    }
+    .minis{
+        display: initial;
+        position: absolute;
+        top:0px;
+        left:50%;
+        transform: translate(-50%, -50%);      
+    }
+}
